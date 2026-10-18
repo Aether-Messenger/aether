@@ -5,9 +5,11 @@ router = APIRouter(
     tags=["health"],
 )
 
+
 @router.get("/live")
 async def liveness():
     return {"status": "alive"}
+
 
 # TODO: Implement readiness check for database and other infrastructure dependencies
 @router.get("/ready")
