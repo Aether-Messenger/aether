@@ -28,6 +28,7 @@ class Chat(Base):
             ChatType,
             name="chat_type_enum",
             values_callable=lambda obj: [e.value for e in obj],
+            native_enum=True,
         ),
         unique=False,
         nullable=False,

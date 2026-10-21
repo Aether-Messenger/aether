@@ -33,7 +33,7 @@ class ChatMember(Base):
             name="chat_member_role_enum",
             values_callable=lambda roles: [role.value for role in roles],
             validate_strings=True,
-            create_constraint=True,
+            native_enum=True,
         ),
         nullable=False,
     )

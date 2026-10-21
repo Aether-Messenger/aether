@@ -37,7 +37,7 @@ class MessageAttachment(Base):
             name="mime_type_enum",
             values_callable=lambda types: [mime.value for mime in types],
             validate_strings=True,
-            create_constraint=True,
+            native_enum=True,
         ),
         nullable=False,
     )
